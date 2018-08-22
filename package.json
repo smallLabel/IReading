@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "immutable": "^3.8.2",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-native": "^0.56.0",
     "react-native-refresh-list-view": "^1.0.10",
