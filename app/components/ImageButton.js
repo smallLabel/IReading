@@ -5,10 +5,7 @@ import propTypes from 'prop-types'
 const PropTypes = {
     onPress: PropTypes.func,
     disabled: PropTypes.bool,
-    uri: PropTypes.string,
-    require: PropTypes.number,
-    isStatic: PropTypes.bool,
-    isUri: PropTypes.bool,
+    source: PropTypes.object,
     style: ViewPropTypes.style,
     containerStyle: ViewPropTypes.style,
 }
@@ -24,5 +21,11 @@ export default class ImageButton extends Component{
             return;
         }
         this.props.onPress();
+    }
+
+    render(){
+        return (
+            <View></View>
+        )
     }
 }

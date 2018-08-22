@@ -39,5 +39,6 @@ export class Button extends Component{
 Button.prototype = propTypes;
 Button.defaultProps = {
     disable: false,
-    onPress: ()=>{}
+    onPress(){},
+    activeOpacity: 0.8
 }
