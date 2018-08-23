@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ListView} from 'react-native';
-
+import {StackNavigator, TanNavigator} from 'react-navigation'
 
 
 import RefreshListView from 'react-native-refresh-list-view'
