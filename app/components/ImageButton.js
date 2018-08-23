@@ -2,6 +2,7 @@ import React, {Component} from 'react-native'
 import {Image, StyleSheet, TouchableOpacity, ViewPropTypes, View} from 'react-native'
 import propTypes from 'prop-types'
 
+
 const PropTypes = {
     onPress: PropTypes.func,
     disabled: PropTypes.bool,
@@ -23,9 +24,19 @@ export default class ImageButton extends Component{
         this.props.onPress();
     }
 
+    
     render(){
         return (
-            <View></View>
+            <TouchableOpacity 
+                style={this.props.containerStyle}
+                onPress={this.props.onPress}
+                disabled={this.props.disabled}>
+                <Image source={this.props.source} style={this.props.style}/>
+            </TouchableOpacity>
         )
     }
+
 }
+
+ImageButton.propTypes = propTypes;
+
