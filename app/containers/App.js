@@ -13,7 +13,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 import MainContainer from '../containers/MainContainer';
 import CategoryContainer from '../containers/CategoryContainer'
 import About from '../pages/About/About';
-import Feenback from '../pages/Feedback/Feedback';
+import Feedback from '../pages/Feedback/Feedback';
 import Splash from '../pages/Splash'
 
 import RefreshListView from 'react-native-refresh-list-view'
