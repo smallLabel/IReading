@@ -14,7 +14,7 @@ export default class MainContainer extends Component {
 
     render() {
         return (
-            <Main>main</Main>
+            <Main {...this.props}/>
         );
     }
 }
