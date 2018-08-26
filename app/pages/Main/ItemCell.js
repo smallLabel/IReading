@@ -11,3 +11,5 @@ const  ItemCell = ({article, onPressHandle})=>(
         </View>
     </TouchableOpacity>
 );
+
+export  default  ItemCell;
