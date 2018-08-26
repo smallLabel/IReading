@@ -8,55 +8,58 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ListView} from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { createStackNavigator, createTabNavigator } from 'react-navigation';
 
-import MainContainer from '../containers/MainContainer';
-import CategoryContainer from '../containers/CategoryContainer'
+import MainContainer from './MainContainer';
+import CategoryContainer from './CategoryContainer'
 import About from '../pages/About/About';
 import Feedback from '../pages/Feedback/Feedback';
-import Splash from '../pages/Splash'
+// import Splash from '../pages/Splash'
 
-import RefreshListView from 'react-native-refresh-list-view'
-import RequestService from '../service/RequestService';
-import LoadingView from '../components/LoadingView';
-
-var WEIXIN_ARTICLE_LIST = 'type=top&key=a73a76d1e4ab69c58fb383a631662617';
-var Request = new  RequestService.SharedIntance();
-
-const TabContainer = TabNavigator(
+const TabContainer = createTabNavigator(
     {
         Main: {screen: MainContainer},
         Category: {screen: CategoryContainer},
-        Feenback: {screen: Feedback},
+        Feedback: {screen: Feedback},
         About: {screen: About}
     }, 
     {
-        lazy: true,
-        tabBarPosition: 'bottom',
-        tabBarOptions: {
-            activeTintColor: '#3e9ce9',
-            inactiveBackgroundColor: '#999999',
-            showIcon: true,
-            style:{
-                backgroundColor: '#fff'
-            },
-            indicatorStyle:{
-                opacity: 0
-            },
-            tabStyle:{
-                padding:0
-            }
-        }
+        // lazy: false,
+        // tabBarPosition: 'bottom',
+        // tabBarOptions: {
+        //     activeTintColor: '#3e9ce9',
+        //     inactiveBackgroundColor: '#999999',
+        //     showIcon: true,
+        //     style:{
+        //         backgroundColor: '#fff'
+        //     },
+        //     indicatorStyle:{
+        //         opacity: 0
+        //     },
+        //     tabStyle:{
+        //         padding:0
+        //     }
+        // }
     }
 )
 
-const App = StackNavigator(
+const App = createStackNavigator(
     {
-    Splash: {screen: Splash},
-    Category: {
-        screen: CategoryContainer,
-    }
+    // Splash: {screen: Splash},
+    // Category: {
+    //     screen: CategoryContainer,
+    // }
+        Home:{screen: TabContainer}
     },
+    // {
+    //     Home:{
+    //         screen: TabContainer,
+    //         navigationOptions: {
+    //             headerLeft: null
+    //         }
+    //     }
+    // },
+
     {
         headerMode: 'screen',
         navigationOptions: {
@@ -65,7 +68,7 @@ const App = StackNavigator(
             },
             headerTitleStyle: {
                 color:'#fff',
-                fontSize: '20'
+                fontSize: 20
             },
             headerTintColor: '#fff'
         }
@@ -73,71 +76,6 @@ const App = StackNavigator(
 ) 
 
 export default App;
-
-// export default class App extends Component<Props> {
-
-    // constructor(props) {
-    //     super(props);
-    //     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-
-    //     this.state = {
-    //         dataSource: ds.cloneWithRows([]
-    //             //暂时为空，等请求到数据后刷新state
-    //         ),
-    //         loaded: false,
-    //     };
-    // }
-
-    // componentDidMount() {
-    //     this.fecthData();
-    // }
-
-    // fecthData = () =>{
-    //     Request.request(WEIXIN_ARTICLE_LIST,'get').then((article)=>{
-
-    //         this.setState({
-    //             dataSource : this.state.dataSource.cloneWithRows(article.result.data),
-    //             loaded: true,
-    //             ds: article.result.data
-    //         })
-    //     }).catch((error)=>{
-    //         this.setState({
-    //             laoded: true
-    //         })
-    //     })
-    // }
-
-    // render() {
-    //     if (!this.state.loaded) {
-    //         return <LoadingView/>
-    //     }
-
-    //     if (this.state.ds == undefined || this.state.ds.length == 0) {
-    //         return (
-    //             <View>
-    //                 <Text style={styles.no_data}>没有数据</Text>
-    //             </View>
-    //         );
-    //     }
-    //   return (
-    //       <ListView dataSource={this.state.dataSource}
-    //                        renderRow={this.renderItem}
-    //                        loadData={this.fecthData}
-    //                        refreshDescription='freshing article'>
-    //       </ListView>
-    //   );
-    // }
-
-    // renderItem(article, sectionID, rowID){
-    //     return(
-    //         <View style={styles.container}>
-    //             <Text style={styles.title}>
-    //                 {article.title}
-    //             </Text>
-    //         </View>
-    //     )
-    // }
-// }
 
 const styles = StyleSheet.create({
   container: {
