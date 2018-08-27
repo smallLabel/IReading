@@ -1689,9 +1689,9 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-create-react-class@^15.6.3:
+create-react-class@^15.6.2, create-react-class@^15.6.3:
   version "15.6.3"
-  resolved "https://registry.npmjs.org/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
+  resolved "http://registry.npm.taobao.org/create-react-class/download/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
@@ -4367,6 +4367,10 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-native-device-info@^0.22.5:
+  version "0.22.5"
+  resolved "http://registry.npm.taobao.org/react-native-device-info/download/react-native-device-info-0.22.5.tgz#9b1882cbb030f2926cff77336e7cd2e87edf52bf"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/react-native-dismiss-keyboard/download/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
@@ -4398,6 +4402,14 @@ react-native-safe-area-view@^0.9.0:
   resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.9.0.tgz#10ece2ecac70e7005a5b0b3f06c8833060e6d21f"
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-scrollable-tab-view@^0.8.0:
+  version "0.8.0"
+  resolved "http://registry.npm.taobao.org/react-native-scrollable-tab-view/download/react-native-scrollable-tab-view-0.8.0.tgz#5cb1fcfce07bf530a3c81ab51fc5071144edac5c"
+  dependencies:
+    create-react-class "^15.6.2"
+    prop-types "^15.6.0"
+    react-timer-mixin "^0.13.3"
 
 react-native-simple-store@^1.3.0:
   version "1.3.0"
@@ -4568,9 +4580,9 @@ react-test-renderer@16.4.1:
     prop-types "^15.6.0"
     react-is "^16.4.1"
 
-react-timer-mixin@^0.13.2:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.4"
-  resolved "https://registry.npmjs.org/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
+  resolved "http://registry.npm.taobao.org/react-timer-mixin/download/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
 
 react-transform-hmr@^1.0.4:
   version "1.0.4"

@@ -9,8 +9,9 @@
   "dependencies": {
     "moment": "^2.22.2",
     "lodash": "^4.17.10",
-    "react-native-scroll-tab-view": "",
+    "react-native-scrollable-tab-view": "^0.8.0",
     "babel-preset-react-native": "^4.0.0",
+    "react-native-device-info": "^0.22.5",
     "immutable": "^3.8.2",
     "leancloud-storage": "^3.10.0",
     "prop-types": "^15.6.2",
