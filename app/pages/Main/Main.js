@@ -1,5 +1,6 @@
 import  React, {Component} from 'react';
-import { View, StyleSheet } from 'react-native'
+import PropTypes from 'prop-types'
+import { View, StyleSheet, DeviceEventEmitter, InteractionManager, ListView } from 'react-native'
 
 export default class Main extends Component {
     render() {

@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "moment": "^2.22.2",
+    "lodash": "^4.17.10",
+    "react-native-scroll-tab-view": "",
     "babel-preset-react-native": "^4.0.0",
     "immutable": "^3.8.2",
     "leancloud-storage": "^3.10.0",
