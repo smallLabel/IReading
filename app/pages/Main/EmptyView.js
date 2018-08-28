@@ -27,7 +27,7 @@ const EmptyView = ({read, typeId, onRefresh})=> (
                 <Text style={{fontSize: 16}}>目前没有数据，请刷新重试……</Text>
             </View>
     </ScrollView>
-)
+);
 
 const styles = StyleSheet.create({
     base:{
@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
     refreshControlBase: {
         backgroundColor: 'transparent'
     }
-})
+});
 
 export default EmptyView;
