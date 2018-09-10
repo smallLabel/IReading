@@ -35,3 +35,17 @@ export  function* requestArticleList(
         ToastUtil.showShort('网络发生错误，请重试')
     }
 }
+
+export function* watchRequestArticleList() {
+    while (true) {
+        const {isRefreshing, loading, typeId, isLoadMore, page} = yield take(types.REQUEST_ARTICLE_LIST);
+        yield fork(
+            requestArticleList,
+            isRefreshing,
+            loading,
+            typeId,
+            isLoading,
+            page
+        );
+    }
+}

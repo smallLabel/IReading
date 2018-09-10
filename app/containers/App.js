@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ListView} from 'react-native';
-import { createStackNavigator, createTabNavigator } from 'react-navigation';
+import { createStackNavigator , createBottomTabNavigator} from 'react-navigation';
 
 import MainContainer from './MainContainer';
 import CategoryContainer from './CategoryContainer'
@@ -16,7 +16,7 @@ import About from '../pages/About/About';
 import Feedback from '../pages/Feedback/Feedback';
 // import Splash from '../pages/Splash'
 
-const TabContainer = createTabNavigator(
+const TabContainer = createBottomTabNavigator(
     {
         Main: {screen: MainContainer},
         Category: {screen: CategoryContainer},

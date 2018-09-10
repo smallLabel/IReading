@@ -12,7 +12,7 @@ const  ItemCell = ({article, onPressHandle})=>(
                 <Text style={styles.title}></Text>
                 <View style={styles.itemRightBottom}>
                     <Text style={styles.userName}></Text>
-                    <Text style={}></Text>
+                    <Text></Text>
                 </View>
             </View>
         </View>
